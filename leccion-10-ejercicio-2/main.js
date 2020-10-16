@@ -15,3 +15,21 @@ function getDogImage() {
   const btn = document.querySelector(".js-dog");
   btn.addEventListener("click", getDogImage);
 
+//EJERCICIO 3
+
+
+  function getUser() {
+      const user = document.querySelector("#name");
+      console.log(user);
+      //No conseguimos que el enlace funcione
+     fetch("https://api.github.com/users/" + user.value)
+        .then(response => response.json())
+        .then(data => {
+        console.log(data);
+        
+       });
+      
+  }
+  
+  const search = document.querySelector("#button");
+  search.addEventListener("click", getUser);
